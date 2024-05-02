@@ -1,0 +1,224 @@
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+nav {
+  background-color: #aa0809;
+  position: fixed !important;
+  width: 100%;
+  z-index: 100;
+}
+nav button:hover {
+  border: none !important;
+}
+.contact {
+  padding: 8px 20px !important;
+  background-color: aqua;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: bold;
+  box-shadow: 1px 1px 5px #d5d5d5;
+  display: inline-block !important;
+}
+.contact:active {
+  transform: scale(0.97);
+}
+
+.halaman-utama {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.halaman-utama .informasi,
+.halaman-utama .gambar,
+.about .informasi,
+.about .gambar {
+  flex: 1;
+  /* padding: 10px; */
+}
+
+.halaman-utama .informasi p {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+a.button {
+  font-size: 20px;
+  padding: 10px 25px;
+  background-color: #aa0809;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  /* margin-top: 20px; */
+  display: inline-block;
+}
+
+.halaman-utama .gambar img {
+  width: 80%;
+  padding-left: 10px;
+  margin-left: 45px;
+  margin-top: 20px;
+}
+
+.about {
+  background-color: #aa0809;
+  color: #fff;
+  padding: 0 0 20px 0;
+}
+
+.about .informasi .p {
+  padding-right: 1.5rem;
+}
+
+.about .gambar img {
+  width: 85%;
+  border-bottom-left-radius: 105px;
+  border-top-right-radius: 105px;
+}
+
+.about .gambar .image-about {
+  margin-left: 45px;
+}
+
+.about .about-informasi-2 .informasi {
+  order: 2 !important;
+}
+
+.about .about-informasi-2 .gambar {
+  order: 1 !important;
+}
+
+section.what-we-do {
+  height: 70vh;
+  width: 100%;
+  background-image: url("../gambar/bg.png");
+  /* background-color: antiquewhite; */
+}
+
+body .our-gallery .containers img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+body .our-gallery .containers {
+  position: relative;
+  padding: 10px;
+}
+
+/* Hide the images by default */
+body .our-gallery .containers .mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+body .our-gallery .containers .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+body .our-gallery .containers .prev,
+body .our-gallery .containers .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 1; /* Tambahkan z-index untuk menempatkan tombol di atas gambar */
+  text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+body .our-gallery .containers .next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+body .our-gallery .containers .prev:hover,
+body .our-gallery .containers .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+body .our-gallery .containers .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+body .our-gallery .containers .caption-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2px 16px;
+  color: white;
+}
+
+body .our-gallery .containers .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+body .our-gallery .containers .column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+body .our-gallery .containers .demo {
+  opacity: 0.6;
+}
+
+body .our-gallery .containers .active,
+body .our-gallery .containers .demo:hover {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .halaman-utama {
+    flex-direction: column-reverse;
+  }
+
+  .about .about-informasi,
+  .about .about-informasi-2 {
+    flex-direction: column-reverse;
+  }
+
+  .about .about-informasi .gambar,
+  .about .about-informasi-2 .gambar {
+    margin: auto !important;
+    display: inline-block;
+    width: 60%;
+    /* margin-left: 100px; */
+  }
+
+  .about .gambar img {
+    width: 100%;
+  }
+
+  .about .about-informasi-2 .informasi {
+    order: 1 !important;
+  }
+  .about .about-informasi-2 .gambar {
+    order: 2 !important;
+  }
+  .about .gambar .image-about {
+    margin-left: 0px;
+  }
+
+  .about p {
+    padding: 0 !important;
+  }
+}
