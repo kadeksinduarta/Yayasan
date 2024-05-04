@@ -1,3 +1,23 @@
+$(document).ready(function () {
+  // Fungsi untuk menambahkan kelas "active" ke tautan yang mengarah ke ID yang sesuai dengan bagian URL
+  function setActiveLink() {
+    var hash = window.location.hash;
+    $(".nav-link").removeClass("active");
+    if (hash !== "") {
+      $('.nav-link[href="' + hash + '"]').addClass("active");
+    }
+  }
+
+  // Panggil fungsi untuk menambahkan kelas "active" pada saat halaman dimuat
+  setActiveLink();
+
+  // Panggil fungsi untuk menambahkan kelas "active" ketika tautan di klik
+  $(".nav-link").on("click", function () {
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
 let slideIndex = 1;
 showSlides(slideIndex);
 

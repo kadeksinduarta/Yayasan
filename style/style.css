@@ -11,6 +11,40 @@ nav {
 nav #navbarText ul li a {
   font-weight: bold;
   color: #fff;
+  transition: all 0.3s;
+}
+nav #navbarText ul li .nav-link.active {
+  color: #6f6acf;
+  border-bottom: 2px solid black;
+}
+
+nav #navbarText ul li .btn-group .buttons {
+  border: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav #navbarText ul li .btn-group button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+nav #navbarText ul li .btn-group .dropdown-menu {
+  background-color: #aeaeae;
+  /* position: absolute;
+  left: 130px;
+  top: 0; */
+}
+
+nav #navbarText ul li .btn-group .dropdown-menu li a:hover {
+  background-color: #aa0809;
+  display: block;
+}
+
+nav #navbarText ul li .btn-group .dropdown-menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
 }
 
 nav button:hover {
